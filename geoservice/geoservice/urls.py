@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from coffee import views as coffee_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+path('coffee/closest', coffee_views.ClosestCoffeeShops.as_view())
 ]
